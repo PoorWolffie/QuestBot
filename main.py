@@ -19,19 +19,19 @@ from flask import Flask
 from threading import Thread
 
 
-app = Flask(__name__)
+appp = Flask(__name__)
 
-@app.route("/kill")
+@appp.route("/kill")
 def kill():
 
     return 1
-@app.route("/")
+@appp.route("/")
 def tcp():
     return "HEALTHY"
 
 
 def run_app():
-    app.run(host="0.0.0.0", port=8000)
+    appp.run(host="0.0.0.0", port=8000)
 
 
 
@@ -256,4 +256,5 @@ if __name__ == '__main__':
     timeee = datetime.now(pytz.utc).replace(microsecond=0)
     Thread(target=run_app).start()
     print("Bot started successfully.")
+
     app.run_polling()
