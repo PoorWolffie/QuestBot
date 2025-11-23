@@ -1,0 +1,6 @@
+python-telegram-bot
+psycopg
+Flask
+psycopg[binary]
+sqlalchemy
+pytz
